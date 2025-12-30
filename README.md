@@ -1,97 +1,106 @@
-StudyFlow
+STUDYFLOW
+APLICAȚIE FULL-STACK PENTRU GESTIONAREA ACTIVITĂȚILOR DE STUDIU
 
-StudyFlow este o aplicație full-stack pentru gestionarea activităților de studiu. Aplicația permite utilizatorilor să se înregistreze, să se autentifice și să își administreze task-urile într-un mod structurat și eficient.
+DESCRIERE GENERALĂ
 
-Proiectul a fost realizat în scop educațional și demonstrează utilizarea unei arhitecturi client–server moderne.
+StudyFlow este o aplicație web full-stack dezvoltată pentru gestionarea activităților de studiu.
+Aplicația permite utilizatorilor să își creeze un cont, să se autentifice și să își administreze task-urile personale într-un mod structurat.
 
-Funcționalități
+Proiectul a fost realizat în scop educațional și are ca obiectiv demonstrarea utilizării unei arhitecturi moderne client-server, precum și a conceptelor fundamentale din dezvoltarea aplicațiilor web.
 
-Înregistrare și autentificare utilizatori
+TEHNOLOGII UTILIZATE
 
-Autentificare bazată pe JSON Web Tokens (JWT)
-
-Creare, modificare și ștergere task-uri
-
-Dashboard pentru gestionarea activităților
-
-API REST pentru comunicarea client–server
-
-Tehnologii utilizate
-Backend
+    Backend
 
 Node.js
-
 Express.js
-
 MongoDB
-
 Mongoose
-
 JSON Web Tokens (JWT)
 
-Frontend
+    Frontend
 
 React
-
 Vite
-
 CSS
-
 Axios
 
-Structura proiectului
-Proiect StudyFlow/
-│
-├── backend/
-│   ├── config/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── server.js
-│   └── package.json
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   └── main.jsx
-│   ├── index.html
-│   └── package.json
-│
-├── .gitignore
-└── README.md
+ARHITECTURA APLICAȚIEI
 
-Instalare și rulare locală
-1. Clonarea repository-ului
+Aplicația urmează o arhitectură client-server:
+Frontend-ul este responsabil de interfața utilizator și comunică cu backend-ul prin cereri HTTP (REST API).
+Backend-ul gestionează logica aplicației, autentificarea utilizatorilor și persistența datelor în baza de date MongoDB.
+
+Accesul la rutele protejate este realizat prin utilizarea token-urilor JWT.
+
+STRUCTURA PROIECTULUI
+
+studyflow
+|
+|-- backend
+| |-- config
+| |-- middleware
+| |-- models
+| |-- routes
+| |-- server.js
+| |-- package.json
+|
+|-- frontend
+| |-- public
+| |-- src
+| | |-- components
+| | |-- pages
+| | |-- services
+| | |-- App.jsx
+| | |-- main.jsx
+| |-- package.json
+|
+|-- .gitignore
+|-- README.md
+
+FUNCȚIONALITĂȚI PRINCIPALE
+
+Înregistrare utilizator
+Autentificare utilizator
+Creare task-uri
+Editare task-uri
+Ștergere task-uri
+Marcare task-uri ca finalizate
+Separarea task-urilor active de cele finalizate
+Salvarea datei de finalizare a task-urilor
+Validarea termenului limită (nu pot fi create task-uri cu dată din trecut)
+Protejarea rutelor prin autentificare JWT
+
+INSTALARE ȘI RULARE LOCALĂ
+
+    Clonarea proiectului
+
 git clone https://github.com/bolocaserban/studyflow.git
 cd studyflow
 
-2. Configurare Backend
+    Configurare Backend
+
 cd backend
 npm install
 npm run dev
 
-
-Creează un fișier .env în directorul backend cu următoarele variabile:
+Se creează un fișier .env în directorul backend cu următoarele variabile:
 
 PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
+MONGO_URI=string_de_conectare_mongodb
+JWT_SECRET=cheie_secreta
 
-3. Configurare Frontend
+    Configurare Frontend
+
 cd frontend
 npm install
 npm run dev
 
-
-Aplicația va fi disponibilă implicit la:
+ACCES APLICAȚIE
 
 Frontend: http://localhost:5173
-
 Backend: http://localhost:5000
 
-Autentificare și securitate
+SECURITATE ȘI CONFIGURARE
 
-Aplicația folosește autentificare bazată pe token-uri JWT.
-Rutele protejate pot fi accesate doar de utilizatorii autentificați, iar task-urile sunt asociate fiecărui utilizator.
+Fișierele sensibile (ex: .env) și directoarele generate automat (node_modules) sunt excluse din repository prin fișierul .gitignore.
