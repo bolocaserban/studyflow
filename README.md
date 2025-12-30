@@ -44,30 +44,28 @@ Accesul la rutele protejate este realizat prin utilizarea token-urilor JWT.
 
 4. STRUCTURA PROIECTULUI
 
-studyflow
-│
-├── backend
-│   ├── config
-│   ├── middleware
-│   ├── models
-│   ├── routes
+```text
+studyflow/
+├── backend/
+│   ├── config/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
 │   ├── server.js
 │   └── package.json
 │
-├── frontend
-│   ├── public
-│   ├── src
-│   │   ├── components
-│   │   ├── pages
-│   │   ├── services
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
 │   │   ├── App.jsx
 │   │   └── main.jsx
 │   └── package.json
 │
 ├── .gitignore
 └── README.md
-
-
 5. FUNCTIONALITATI PRINCIPALE
 
 - Inregistrare utilizator
