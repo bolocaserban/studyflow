@@ -1,106 +1,113 @@
-STUDYFLOW
-APLICAȚIE FULL-STACK PENTRU GESTIONAREA ACTIVITĂȚILOR DE STUDIU
+STUDYFLOW – APLICATIE FULL-STACK PENTRU GESTIONAREA ACTIVITATILOR DE STUDIU
 
-DESCRIERE GENERALĂ
 
-StudyFlow este o aplicație web full-stack dezvoltată pentru gestionarea activităților de studiu.
-Aplicația permite utilizatorilor să își creeze un cont, să se autentifice și să își administreze task-urile personale într-un mod structurat.
+1. DESCRIERE GENERALA
 
-Proiectul a fost realizat în scop educațional și are ca obiectiv demonstrarea utilizării unei arhitecturi moderne client-server, precum și a conceptelor fundamentale din dezvoltarea aplicațiilor web.
+StudyFlow este o aplicatie web full-stack dezvoltata in scop educational, avand ca obiectiv
+demonstrerea utilizarii unei arhitecturi moderne client–server, precum si aplicarea
+conceptelor fundamentale din dezvoltarea aplicatiilor web.
 
-TEHNOLOGII UTILIZATE
+Aplicatia permite utilizatorilor sa isi creeze un cont, sa se autentifice si sa gestioneze
+task-uri de studiu intr-un mod structurat si eficient.
 
-    Backend
 
-Node.js
-Express.js
-MongoDB
-Mongoose
-JSON Web Tokens (JWT)
+2. TEHNOLOGII UTILIZATE
 
-    Frontend
+Backend:
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JSON Web Tokens (JWT)
 
-React
-Vite
-CSS
-Axios
+Frontend:
+- React
+- Vite
+- CSS
+- Axios
 
-ARHITECTURA APLICAȚIEI
 
-Aplicația urmează o arhitectură client-server:
-Frontend-ul este responsabil de interfața utilizator și comunică cu backend-ul prin cereri HTTP (REST API).
-Backend-ul gestionează logica aplicației, autentificarea utilizatorilor și persistența datelor în baza de date MongoDB.
+3. ARHITECTURA APLICATIEI
+
+Aplicatia urmeaza o arhitectura de tip client–server.
+
+Frontend-ul este responsabil de interfata utilizator si comunica cu backend-ul prin cereri
+HTTP (REST API).
+
+Backend-ul gestioneaza:
+- logica aplicatiei
+- autentificarea utilizatorilor
+- persistenta datelor in baza de date MongoDB
 
 Accesul la rutele protejate este realizat prin utilizarea token-urilor JWT.
 
-STRUCTURA PROIECTULUI
+
+4. STRUCTURA PROIECTULUI
 
 studyflow
-|
-|-- backend
-| |-- config
-| |-- middleware
-| |-- models
-| |-- routes
-| |-- server.js
-| |-- package.json
-|
-|-- frontend
-| |-- public
-| |-- src
-| | |-- components
-| | |-- pages
-| | |-- services
-| | |-- App.jsx
-| | |-- main.jsx
-| |-- package.json
-|
-|-- .gitignore
-|-- README.md
+│
+├── backend
+│   ├── config
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   ├── server.js
+│   └── package.json
+│
+├── frontend
+│   ├── public
+│   ├── src
+│   │   ├── components
+│   │   ├── pages
+│   │   ├── services
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── package.json
+│
+├── .gitignore
+└── README.md
 
-FUNCȚIONALITĂȚI PRINCIPALE
 
-Înregistrare utilizator
-Autentificare utilizator
-Creare task-uri
-Editare task-uri
-Ștergere task-uri
-Marcare task-uri ca finalizate
-Separarea task-urilor active de cele finalizate
-Salvarea datei de finalizare a task-urilor
-Validarea termenului limită (nu pot fi create task-uri cu dată din trecut)
-Protejarea rutelor prin autentificare JWT
+5. FUNCTIONALITATI PRINCIPALE
 
-INSTALARE ȘI RULARE LOCALĂ
+- Inregistrare utilizator
+- Autentificare utilizator
+- Creare task-uri
+- Editare task-uri
+- Stergere task-uri
+- Marcare task-uri ca finalizate
+- Separarea task-urilor active de cele finalizate
+- Salvarea datei de finalizare a task-urilor
+- Validarea termenului limita (nu pot fi create task-uri cu data din trecut)
+- Protejarea rutelor prin autentificare JWT
 
-    Clonarea proiectului
 
-git clone https://github.com/bolocaserban/studyflow.git
-cd studyflow
+6. INSTALARE SI RULARE LOCALA
 
-    Configurare Backend
+1. Clonarea repository-ului:
+   git clone https://github.com/bolocaserban/studyflow.git
+   cd studyflow
 
-cd backend
-npm install
-npm run dev
+2. Configurare Backend:
+   cd backend
+   npm install
+   npm run dev
 
-Se creează un fișier .env în directorul backend cu următoarele variabile:
+   Se va crea un fisier .env cu urmatoarele variabile:
+   PORT=5000
+   MONGO_URI=your_mongodb_connection_string
+   JWT_SECRET=your_secret_key
 
-PORT=5000
-MONGO_URI=string_de_conectare_mongodb
-JWT_SECRET=cheie_secreta
+3. Configurare Frontend:
+   cd frontend
+   npm install
+   npm run dev
 
-    Configurare Frontend
 
-cd frontend
-npm install
-npm run dev
+7. ACCES APLICATIE
 
-ACCES APLICAȚIE
+Frontend:
+http://localhost:5173
 
-Frontend: http://localhost:5173
-Backend: http://localhost:5000
-
-SECURITATE ȘI CONFIGURARE
-
-Fișierele sensibile (ex: .env) și directoarele generate automat (node_modules) sunt excluse din repository prin fișierul .gitignore.
+Backend:
+http://localhost:5000
