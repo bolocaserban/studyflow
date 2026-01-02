@@ -66,7 +66,8 @@ studyflow/
 │
 ├── .gitignore
 └── README.md
-```text
+```
+
 
 5. FUNCTIONALITATI PRINCIPALE
 
