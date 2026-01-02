@@ -6,7 +6,6 @@ STUDYFLOW – APLICATIE FULL-STACK PENTRU GESTIONAREA ACTIVITATILOR DE STUDIU
 StudyFlow este o aplicatie web full-stack dezvoltata in scop educational, avand ca obiectiv
 demonstrerea utilizarii unei arhitecturi moderne client–server, precum si aplicarea
 conceptelor fundamentale din dezvoltarea aplicatiilor web.
-
 Aplicatia permite utilizatorilor sa isi creeze un cont, sa se autentifice si sa gestioneze
 task-uri de studiu intr-un mod structurat si eficient.
 
@@ -30,7 +29,6 @@ Frontend:
 3. ARHITECTURA APLICATIEI
 
 Aplicatia urmeaza o arhitectura de tip client–server.
-
 Frontend-ul este responsabil de interfata utilizator si comunica cu backend-ul prin cereri
 HTTP (REST API).
 
@@ -109,6 +107,5 @@ studyflow/
 
 Frontend:
 http://localhost:5173
-
 Backend:
 http://localhost:5000
