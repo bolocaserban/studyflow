@@ -1,48 +1,38 @@
-STUDYFLOW – APLICATIE FULL-STACK PENTRU GESTIONAREA ACTIVITATILOR DE STUDIU
+# StudyFlow – Aplicație Full-Stack pentru Gestionarea Activităților de Studiu
 
+## Descriere Generală
 
-1. DESCRIERE GENERALA
+StudyFlow este o aplicație web full-stack dezvoltată în scop educațional, având ca obiectiv demonstrarea utilizării unei arhitecturi moderne client-server, precum și aplicarea conceptelor fundamentale din dezvoltarea aplicațiilor web. Aplicația permite utilizatorilor să își creeze un cont, să se autentifice și să gestioneze task-uri de studiu într-un mod structurat și eficient.
 
-StudyFlow este o aplicatie web full-stack dezvoltata in scop educational, avand ca obiectiv
-demonstrerea utilizarii unei arhitecturi moderne client–server, precum si aplicarea
-conceptelor fundamentale din dezvoltarea aplicatiilor web.
-Aplicatia permite utilizatorilor sa isi creeze un cont, sa se autentifice si sa gestioneze
-task-uri de studiu intr-un mod structurat si eficient.
+## Tehnologii Utilizate
 
-
-2. TEHNOLOGII UTILIZATE
-
-Backend:
+### Backend
 - Node.js
 - Express.js
 - MongoDB
 - Mongoose
 - JSON Web Tokens (JWT)
 
-Frontend:
+### Frontend
 - React
 - Vite
 - CSS
 - Axios
 
+## Arhitectura Aplicației
 
-3. ARHITECTURA APLICATIEI
+Aplicația urmează o arhitectură de tip client-server. Frontend-ul este responsabil de interfața utilizator și comunică cu backend-ul prin cereri HTTP (REST API).
 
-Aplicatia urmeaza o arhitectura de tip client–server.
-Frontend-ul este responsabil de interfata utilizator si comunica cu backend-ul prin cereri
-HTTP (REST API).
-
-Backend-ul gestioneaza:
-- logica aplicatiei
-- autentificarea utilizatorilor
-- persistenta datelor in baza de date MongoDB
+Backend-ul gestionează:
+- Logica aplicației
+- Autentificarea utilizatorilor
+- Persistența datelor în baza de date MongoDB
 
 Accesul la rutele protejate este realizat prin utilizarea token-urilor JWT.
 
+## Structura Proiectului
 
-4. STRUCTURA PROIECTULUI
-
-```text
+```
 studyflow/
 ├── backend/
 │   ├── config/
@@ -66,46 +56,105 @@ studyflow/
 └── README.md
 ```
 
+## Funcționalități Principale
 
-5. FUNCTIONALITATI PRINCIPALE
-
-- Inregistrare utilizator
+- Înregistrare utilizator
 - Autentificare utilizator
 - Creare task-uri
 - Editare task-uri
-- Stergere task-uri
+- Ștergere task-uri
 - Marcare task-uri ca finalizate
 - Separarea task-urilor active de cele finalizate
 - Salvarea datei de finalizare a task-urilor
-- Validarea termenului limita (nu pot fi create task-uri cu data din trecut)
+- Validarea termenului limită (nu pot fi create task-uri cu data din trecut)
 - Protejarea rutelor prin autentificare JWT
 
+## Cerințe Preliminare
 
-6. INSTALARE SI RULARE LOCALA
+Înainte de a rula aplicația, asigură-te că ai instalat:
+- Node.js (versiunea 14 sau mai nouă)
+- npm sau yarn
+- MongoDB (local sau cont MongoDB Atlas)
+- Git
 
-1. Clonarea repository-ului:
-   git clone https://github.com/bolocaserban/studyflow.git
-   cd studyflow
+## Instalare și Rulare Locală
 
-2. Configurare Backend:
-   cd backend
-   npm install
-   npm run dev
+### 1. Clonarea repository-ului
 
-   Se va crea un fisier .env cu urmatoarele variabile:
-   PORT=5000
-   MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_secret_key
+```bash
+git clone https://github.com/bolocaserban/studyflow.git
+cd studyflow
+```
 
-3. Configurare Frontend:
-   cd frontend
-   npm install
-   npm run dev
+### 2. Configurare Backend
 
+```bash
+cd backend
+npm install
+```
 
-7. ACCES APLICATIE
+Creează un fișier `.env` în directorul `backend/` cu următoarele variabile:
 
-Frontend:
-http://localhost:5173
-Backend:
-http://localhost:5000
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+```
+
+Pornește serverul backend:
+
+```bash
+npm run dev
+```
+
+### 3. Configurare Frontend
+
+Deschide un nou terminal și navighează către directorul frontend:
+
+```bash
+cd frontend
+npm install
+```
+
+Pornește aplicația frontend:
+
+```bash
+npm run dev
+```
+
+## Acces Aplicație
+
+- **Frontend**: [http://localhost:5173](http://localhost:5173)
+- **Backend API**: [http://localhost:5000](http://localhost:5000)
+
+## Structura Bazei de Date
+
+### User Model
+- `username`: String (unic, obligatoriu)
+- `email`: String (unic, obligatoriu)
+- `password`: String (hash-uit, obligatoriu)
+
+### Task Model
+- `title`: String (obligatoriu)
+- `description`: String
+- `dueDate`: Date (obligatoriu)
+- `completed`: Boolean (default: false)
+- `completedAt`: Date
+- `userId`: ObjectId (referință către User)
+
+## Provocări Întâmpinate și Lecții Învățate
+
+Pe parcursul dezvoltării acestui proiect, am învățat:
+- Implementarea unui sistem complet de autentificare cu JWT
+- Gestionarea state-ului în React și comunicarea cu API-uri
+- Structurarea unei aplicații full-stack moderne
+- Validarea datelor atât pe frontend cât și pe backend
+- Securizarea rutelor și protejarea împotriva vulnerabilităților comune
+
+## Autor
+
+Serban Boloca - [GitHub](https://github.com/bolocaserban)
+
+## Licență
+
+Acest proiect este dezvoltat în scop educațional ca parte a cursurilor universitare.
