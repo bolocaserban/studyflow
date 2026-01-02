@@ -142,19 +142,4 @@ npm run dev
 - `completedAt`: Date
 - `userId`: ObjectId (referință către User)
 
-## Provocări Întâmpinate și Lecții Învățate
 
-Pe parcursul dezvoltării acestui proiect, am învățat:
-- Implementarea unui sistem complet de autentificare cu JWT
-- Gestionarea state-ului în React și comunicarea cu API-uri
-- Structurarea unei aplicații full-stack moderne
-- Validarea datelor atât pe frontend cât și pe backend
-- Securizarea rutelor și protejarea împotriva vulnerabilităților comune
-
-## Autor
-
-Serban Boloca - [GitHub](https://github.com/bolocaserban)
-
-## Licență
-
-Acest proiect este dezvoltat în scop educațional ca parte a cursurilor universitare.
