@@ -271,6 +271,11 @@ NODE_ENV=production
 **Frontend:**
 Pentru deployment, actualizează `API_URL` în `src/services/api.js` cu URL-ul backend-ului tău de producție.
 
+Opțiuni de Deployment
+Backend: Render, Railway, Fly.io
+Frontend: Vercel, Netlify, GitHub Pages
+Database: MongoDB Atlas (free tier 512MB)
+
 ### Build Commands
 
 ```bash
