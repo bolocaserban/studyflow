@@ -262,7 +262,7 @@ Pe parcursul dezvoltării acestui proiect, am învățat:
 
 **Backend (.env):**
 ```env
-PORT=5000
+PORT=5001
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_super_secret_key_minimum_32_characters
 NODE_ENV=production
